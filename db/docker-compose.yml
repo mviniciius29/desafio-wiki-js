@@ -1,0 +1,23 @@
+
+version: "3"
+services:
+#Banco de dados
+  db:
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_DB: wiki
+      POSTGRES_PASSWORD: wikijsrocks
+      POSTGRES_USER: wikijs
+    restart: unless-stopped
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+#Configuração de rede      
+networks:
+  default:
+    external:
+      name: containers-network
+
+#Configuração do volume      
+volumes:
+  db-data:
