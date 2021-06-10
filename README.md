@@ -10,7 +10,7 @@ Desafio de instalação do Wiki.js utilizando containers.
 
 O projeto foi divido em dois diretorios: **db** e **wiki**. Em cada diretório existe um arquivo **docker-compose.xml** com as configurações de inicialização do container.
 
-* Inicilização de rede para comunicação dos containers
+* Inicilização de rede para comunicação dos containers:
 
 ```
 docker network create containers-network  
